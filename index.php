@@ -79,15 +79,20 @@
     <h1 class = "border-short-bottom text-center">รายการเเนะนำ</h1>
     <div class="row">
 <section class = "col-12 col-sm-12">
-    <div class="card mb-3" style="max-width: 950px;">
+    <div class="card mb-3 h-100" style="max-width: 950px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
+        <a href ="#" class = "warpper-card-img">
+      <img src="assets/icon/cake.jpg" class="img-fluid rounded-start" alt="...">
+      </a>
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">ร้านที่ 1</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maiores molestiae hic soluta voluptates deserunt quo rerum? Ad quod deserunt non eius, blanditiis, at, sed a odit cupiditate repudiandae quisquam?</p>
+        <div class = "p-0 mb-2">
+            <a href = "#" class ="btn btn-primary">more info</a>
+        </div>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
@@ -95,17 +100,22 @@
 </div>
     </section>
 <section class = "col-12 col-sm-12">
-    <div class="card mb-3" style="max-width: 950px;">
+    <div class="card mb-3 h-100" style="max-width: 950px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
+    <a href ="#">
+      <img src="assets/icon/honey.jpg" class="img-fluid rounded-start" alt="honey">
+    </a>
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">ร้านที่ 2</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maiores molestiae hic soluta voluptates deserunt quo rerum? Ad quod deserunt non eius, blanditiis, at, sed a odit cupiditate repudiandae quisquam?</p>
+        <div class = "p-0 mb-2">
+            <a href = "#" class ="btn btn-primary">more info</a>
+        </div>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
+    </div>
     </div>
   </div>
 </div>
