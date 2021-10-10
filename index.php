@@ -122,9 +122,26 @@
         </div>
       </div>
     </section>
-
     </div>
 </section>
+<!-- footer -->
+<footer class = "semi-footer p-5 text-center text-md-left">
+<div class="row">
+  <div class="col-md-4">
+  <a class="navbar-brand" href="#">
+      <img src="/assets/icon/utensils-solid.svg" alt="" width="35" height="35" class="d-inline-block align-text-top">
+      Recommend Restaurant
+    </a>
+    <p>
+      ช่องทางการติดต่อ<br>
+      Kevinindy2k@gmail.com
+    </p>
+    <a href ="https://www.facebook.com/kevinindy2k/" target = "_blank">Facebook</a>
+  </div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+</div>
+</footer>
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
