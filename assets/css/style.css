@@ -40,6 +40,11 @@ body {
   margin-left: -50px;
   background: #595959;
 }
+.img-cover {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
 
 .blackscreen {
   background: rgba(0, 0, 0, 0.5);

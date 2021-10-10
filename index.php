@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
     <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-alpha2">
     <div class="container">
@@ -35,6 +36,7 @@
     </div>
   </div>
 </nav>
+
     <!-- carousel -->
 <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -78,12 +80,12 @@
 <section class="container">
     <h1 class = "border-short-bottom text-center">รายการเเนะนำ</h1>
     <div class="row">
-<section class = "col-12 col-sm-12">
-    <div class="card mb-3 h-100" style="max-width: 950px;">
+<section class = "col-12 col-sm-12 mb-4">
+    <div class="card h-100">
   <div class="row g-0">
     <div class="col-md-4">
-        <a href ="#" class = "warpper-card-img">
-      <img src="assets/icon/cake.jpg" class="img-fluid rounded-start" alt="...">
+        <a href ="#" class = "">
+      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80" class="img-fluid img-cover" alt="...">
       </a>
     </div>
     <div class="col-md-8">
@@ -99,26 +101,26 @@
   </div>
 </div>
     </section>
-<section class = "col-12 col-sm-12">
-    <div class="card mb-3 h-100" style="max-width: 950px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-    <a href ="#">
-      <img src="assets/icon/honey.jpg" class="img-fluid rounded-start" alt="honey">
-    </a>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">ร้านที่ 2</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maiores molestiae hic soluta voluptates deserunt quo rerum? Ad quod deserunt non eius, blanditiis, at, sed a odit cupiditate repudiandae quisquam?</p>
-        <div class = "p-0 mb-2">
-            <a href = "#" class ="btn btn-primary">more info</a>
+      <section class = "col-12 col-sm-12 mb-4">
+          <div class="card h-100">
+        <div class="row g-0">
+          <div class="col-md-4">
+          <a href ="#" class = "">
+            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80" class="img-fluid img-cover" alt="honey">
+          </a>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">ร้านที่ 2</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maiores molestiae hic soluta voluptates deserunt quo rerum? Ad quod deserunt non eius, blanditiis, at, sed a odit cupiditate repudiandae quisquam?</p>
+              <div class = "p-0 mb-2">
+                  <a href = "#" class ="btn btn-primary">more info</a>
+              </div>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          </div>
         </div>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-    </div>
-  </div>
-</div>
+      </div>
     </section>
 
     </div>
