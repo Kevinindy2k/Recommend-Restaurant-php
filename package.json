@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Kevinindy2k/Recommend-Restaurant-php#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "bootstrap": "^5.1.2",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
