@@ -66,6 +66,15 @@ body {
   padding: 10px 0;
 }
 
+.footer {
+  background: #000;
+  color: #fff;
+  font-size: 0.7rem;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+}
+
 .star-rating {
   color: gold;
   font-size: 0.9em;
