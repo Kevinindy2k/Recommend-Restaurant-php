@@ -87,3 +87,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+#navbar {
+  padding: 25px;
+  transition: 0.5s;
+}
