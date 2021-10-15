@@ -91,3 +91,11 @@ body {
   padding: 25px;
   transition: 0.5s;
 }
+
+.page-title{
+  position: relative;
+  display: block;
+  padding-top: 250px;
+  padding-bottom: 100px;
+  color: #fff;
+}
