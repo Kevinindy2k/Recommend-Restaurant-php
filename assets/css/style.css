@@ -218,6 +218,9 @@ li.inverted > .timeline-card{
   }
   .timeline-arrow{
     text-align: left;
-    left: 32px;
+    left: 0;
+  }
+   .timeline-arrow > i{ /*เข้าถึง i ที่มี timeline-arrow ครอบอยู่ */
+    margin-left: 32px;
   }
 }
