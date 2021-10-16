@@ -200,8 +200,30 @@ li.inverted > .timeline-card{
 .btn-group-custom button{
   margin-bottom: 0.5rem;
   width: 100px;
-
 }
+.blog-image{
+  padding: 200px 0px 120px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+.blog-content{
+  padding: 50px 100px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+@media (max-width: 991px) {
+  .blog-content{
+    padding: 40px 50px;
+  }
+  
+}
+@media (max-width: 768px) {
+  .blog-content{
+    padding: 20px 30px;
+  }
+  
+}
+
 
 
 @media (max-width: 768px){
