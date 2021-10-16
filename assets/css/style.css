@@ -196,6 +196,13 @@ li.inverted > .timeline-card{
   color: cadetblue;
 }
 
+/* Blog */
+.btn-group-custom button{
+  margin-bottom: 0.5rem;
+  width: 100px;
+
+}
+
 
 @media (max-width: 768px){
   .timeline::before,
