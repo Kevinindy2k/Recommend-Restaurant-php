@@ -7,7 +7,9 @@ body {
   height: 100%;
 }
 
-.carousel,
+.carousel{
+  height: 65%;
+}
 .carousel-inner,
 .carousel-item,
 .carousel-inner .active {
