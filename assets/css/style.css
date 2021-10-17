@@ -89,17 +89,27 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* Navbar */
 #navbar {
   padding: 25px;
   transition: 0.5s;
 }
+@media (max-width:480px) {
+  .navbar-brand{
+    font-size: 0.8rem;
+    line-height: 2rem;
+  
+  }
+}
 
-.page-title{
-  position: relative;
-  display: block;
-  padding-top: 250px;
-  padding-bottom: 100px;
+
+
+.page-image{
+  padding: 200px 0px 120px;
+  text-align: center;
   color: #fff;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .timeline{
@@ -203,12 +213,7 @@ li.inverted > .timeline-card{
   margin-bottom: 0.5rem;
   width: 100px;
 }
-.blog-image{
-  padding: 200px 0px 120px;
-  text-align: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-}
+
 .blog-content{
   padding: 50px 100px;
   box-shadow: 0px 0px 10px #a5a5a5;
@@ -247,6 +252,27 @@ li.inverted > .timeline-card{
 
 label {
   margin-bottom: 0.5rem;
+}
+
+/* on to top */
+.to-top {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  width: 40px;
+  height: 40px;
+  background: #75c6fc;
+  color: #fff;
+  z-index: 9999;
+  border-radius: 50%;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.to-top:hover {
+  color: #fff;
+  background: #66b9f1;
 }
 
 @media (max-width: 768px){
