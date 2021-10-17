@@ -27,35 +27,8 @@
 
 <body>
   <!-- navbar -->
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-alpha2">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="/assets/icon/utensils-solid.svg" alt="" width="30" height="30"
-          class="d-inline-block align-text-top" />
-        Recommend Restaurant
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarkey"
-        aria-controls="navbarkey" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarkey">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <?php include_once('includes/navbar.php') ?>
+  
 
   <!-- carousel -->
   <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -126,7 +99,7 @@
                   cupiditate repudiandae quisquam?
                 </p>
                 <div class="p-0 mb-2">
-                  <a href="blog-detail.html" class="btn btn-info">more info
+                  <a href="blog-detail.php" class="btn btn-info">more info
                     <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div>
@@ -172,7 +145,7 @@
                   cupiditate repudiandae quisquam?
                 </p>
                 <div class="p-0 mb-2">
-                  <a href="blog-detail.html" class="btn btn-info">more info
+                  <a href="blog-detail.php" class="btn btn-info">more info
                     <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div>
@@ -201,52 +174,7 @@
     </div>
   </section>
   <!-- footer -->
-  <footer class="semi-footer p-5 text-center text-md-start">
-    <div class="row">
-      <div class="col-md-4">
-        <a class="navbar-brand" href="#">
-          <img src="/assets/icon/utensils-solid.svg" alt="" width="30" height="30"
-            class="d-inline-block align-text-top" />
-          Recommend Restaurant
-        </a>
-        <p>
-          <i class="fas fa-phone-square-alt"></i> อีเมล :
-          kevinindy2k@gmail.com <br />
-          <i class="fas fa-phone-square-alt"></i> อีเมล :
-          kevinindy2k@gmail.com <br />
-          <i class="fas fa-phone-square-alt"></i> อีเมล :
-          kevinindy2k@gmail.com <br />
-        </p>
-        <a href="https://www.facebook.com/kevinindy2k/" target="_blank">
-          <i class="fab fa-facebook-square fa-2x"></i>
-        </a>
-        <a href="https://www.facebook.com/kevinindy2k/" target="_blank">
-          <i class="fab fa-youtube-square fa-2x"></i>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <ul class="navbar-nav">
-          <h4>About me</h4>
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4"></div>
-    </div>
-  </footer>
-  <footer class="footer">
-    <span> COPYRIGHT @ 2021
-      <a href="https://www.facebook.com" target="_blank">Pattarapon Koomphon</a>
-      All Right Reserved
-    </span>
-  </footer>
+  <?php include_once('includes/footer.php')?>
 
   <!-- On to top -->
   <div class="to-top">
