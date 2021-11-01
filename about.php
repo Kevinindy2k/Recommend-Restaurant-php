@@ -42,22 +42,15 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XhYfAeQSJX4"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RLXsZaD3oJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-lg-6 py-5 p-lg-0">
-                <h2>เพลง : ก็ใช้ตาดูดิ</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga minima asperiores eveniet
-                    exercitationem? Fugit placeat iure, eaque excepturi repellendus recusandae cum sit, sed mollitia
-                    natus odio dolorem inventore, numquam dolorum?</p>
+                <h2>RATIONALE :</h2>
+                <p style="padding-left:40px">According to the study, eating junk food leads to early death and a lot of diseases. So, People should eat less junk food. But for them to find healthy restaurants is quite hard especially during a pandemic. So, This is why we want to create a website to help people find or recommend healthy restaurants for them.</p>
                 <br>
-                <h2>อ่านเห้ยยย</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit impedit corrupti eveniet fugiat,
-                    repudiandae ratione quidem nulla id architecto dolor aspernatur, maiores ab quis nihil hic alias
-                    quibusdam? Facilis, eum?</p>
+                <h2>BENEFITS :</h2>
+                <p style="padding-left:40px">The target group will be able to find restaurants that responded to their needs.</p>
             </div>
         </div>
     </section>

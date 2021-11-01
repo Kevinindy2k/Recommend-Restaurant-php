@@ -39,7 +39,7 @@
     <!-- Blog -->
     <section class="container py-5">
         <div class="row pb-4">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center ">
                 <div class="btn-group-custom">
                     <button class="btn btn-info">ทั้งหมด</button>
                     <button class="btn btn-info">1 ดาว</button>
