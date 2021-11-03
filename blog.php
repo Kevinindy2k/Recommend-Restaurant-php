@@ -1,8 +1,19 @@
 <?php
 require_once('php/connect.php');
 
-$sql = "SELECT * FROM articles";
-$result = $conn->query($sql) or die($conn->error);
+// if(isset($_GET['tag'])){
+//     $tag = $_GET['tag'];
+// }else{
+//     $tag = 'all';
+// }
+
+$tag = isset($_GET['tag']) ? $_GET['tag'] : 'all';
+$sql = "SELECT * FROM `articles` WHERE `tag` LIKE '%".$tag."%'";
+
+$result = $conn->query($sql);
+if (!$result){
+    header('Location: blog.php');
+}
 
 ?>
 <!DOCTYPE html>
@@ -48,12 +59,24 @@ $result = $conn->query($sql) or die($conn->error);
         <div class="row pb-4">
             <div class="col-12 text-center">
                 <div class="btn-group-custom">
+                    <a href ="blog.php?tag=all">
                     <button class="btn btn-info">ทั้งหมด</button>
+                    </a>
+                    <a href ="blog.php?tag=1star">
                     <button class="btn btn-info">1 ดาว</button>
+                    </a>
+                    <a href ="blog.php?tag=2star">
                     <button class="btn btn-info">2 ดาว</button>
+                    </a>
+                    <a href ="blog.php?tag=3star">
                     <button class="btn btn-info">3 ดาว</button>
+                    </a>
+                    <a href ="blog.php?tag=4star">
                     <button class="btn btn-info">4 ดาว</button>
+                    </a>
+                    <a href ="blog.php?tag=5star">
                     <button class="btn btn-info">5 ดาว</button>
+                    </a>
                 </div>
             </div>
         </div>
