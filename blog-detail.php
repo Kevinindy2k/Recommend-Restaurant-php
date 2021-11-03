@@ -1,3 +1,16 @@
+<?php
+require_once('php/connect.php');
+
+$sql = "SELECT * FROM articles WHERE id ='".$_GET['id']."' ";
+$result = $conn->query($sql) or die($conn->error);
+
+if ($result->num_rows > 0){
+    $row = $result->fetch_assoc();
+} else {
+    header('Location: blog.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,16 +53,11 @@
     <section class="container blog-content">
         <div class="row">
             <div class="col-12">
-                <h2><strong>Title</strong></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur earum ducimus temporibus eligendi,
-                    ex
-                    quibusdam dolor, cupiditate laudantium porro corrupti doloremque autem sapiente accusantium illo
-                    eveniet
-                    voluptatem necessitatibus odio repellat.</p>
+            <?php echo $row['detail']?>
             </div>
             <div class="col-12">
                 <hr>
-                <p class="text-end text-muted">Create by KeWie</p>
+                <p class="text-end text-muted"><?php echo date_format(new DateTime($row['updated_at']),"j F Y"); ?></p>
             </div>
             <div class="owl-carousel owl-theme">
                 <div> Your Content </div>
