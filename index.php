@@ -96,7 +96,7 @@
                 <span><b>ร้าน สีสด บาย บานาน่าลีฟ</b></span> ตั้งอยู่ภายในโครงการ The Circle ถนนราชพฤกษ์ เดินเข้ามาภายในร้านต้องสะดุดตากับ ไรซ์บาร์ (Rice Bar) บาร์ข้าวออร์แกนิคที่เกิดจากการนำข้าวหลากหลายสายพันธุ์มาพัฒนาทำเป็นสูตรที่ทานง่าย รสชาติอร่อย แถมเมนูอาหารของที่ร้านก็รสชาติดี เรียกได้ว่าอร่อยถูกปาก แถมดีต่อสุขภาพอีกด้วย
                 </p>
                 <div class="p-0 mb-2">
-                  <a href="blog-detail.php" class="btn btn-info">more info
+                  <a href="#" class="btn btn-info">more info
                     <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div>
@@ -142,7 +142,7 @@
                   cupiditate repudiandae quisquam?
                 </p>
                 <div class="p-0 mb-2">
-                  <a href="blog-detail.php" class="btn btn-info">more info
+                  <a href="#" class="btn btn-info">more info
                     <i class="fas fa-arrow-circle-right"></i>
                   </a>
                 </div>
