@@ -32,3 +32,6 @@ $('.to-top').on('click', function () {
 })
 
 $('.jarallax').jarallax();
+
+
+// recap

@@ -1,6 +1,8 @@
 <?php 
 require_once('php/connect.php');
 
+$secretKey = '6Le_PBMdAAAAAEJMhGEQQkVLsyLEcvXAaZUDuKBr';
+
 ?>
 
 <!DOCTYPE html>
@@ -95,30 +97,33 @@ require_once('php/connect.php');
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Comment</h5>
-                        <form>
+                        <form method="post" action = "php/contact.php">
                             <div class="row py-1">
                                 <div class="form-group col-md-4 py-1">
                                     <label for="name">ชื่อ</label>
-                                    <input type="text" id="name" class="form-control" placeholder="First name"
+                                    <input type="text" id="name" name="name" class="form-control" required placeholder="First name"
                                         aria-label="First name">
                                 </div>
                                 <div class="form-group col-md-4 py-1">
-                                    <label for="name">นามสกุล</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Last name"
+                                    <label for="lastname">นามสกุล</label>
+                                    <input type="text" id="lastname" name ="lastname" class="form-control" required placeholder="Last name"
                                         aria-label="Last name">
                                 </div>
                                 <div class="form-group col-md-4 py-1">
-                                    <label for="name">ร้านอาหารที่ชื่นชอบ</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Restaurant name"
+                                    <label for="restaurant">ร้านอาหารที่ชื่นชอบ</label>
+                                    <input type="text" id="restaurant" name = "restaurant" class="form-control" required placeholder="Restaurant name"
                                         aria-label="Restaurant name">
                                 </div>
                                
                             </div>
                             <div class="form-group">
                                 <label for="message">ข้อความ</label>
-                                <textarea id="message" rows="10" class="form-control" placeholder="Note"></textarea>
+                                <textarea id="message" name = "message" rows="5" class="form-control" required placeholder="Note"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary d-block mx-auto">ส่ง</button>
+                            <div id="recaptcha-wrapper" class="text-center my-2">
+                            <div class="g-recaptcha d-inline-block" data-callback="recaptchaCallback" data-sitekey="6Le_PBMdAAAAAAv6sIOtSOQ3oGDW06xMAceYN7op"></div>
+                            </div>
+                            <button type="submit" id = "btn-submit" name = "btn-submit" class="btn btn-primary d-block mx-auto" disabled>ส่งข้อมูล</button>
                         </form>
                     </div>
                 </div>
@@ -140,7 +145,45 @@ require_once('php/connect.php');
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
     <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        $(function(){
+    // global variables
+    captchaResized = false;
+    captchaWidth = 304;
+    captchaHeight = 78;
+    captchaWrapper = $('#recaptcha-wrapper');
+    captchaElements = $('#rc-imageselect, .g-recaptcha');
+
+    $(window).on('resize', function() {
+        resizeCaptcha();
+    });
+
+    resizeCaptcha();
+});
+
+function resizeCaptcha() {
+    if (captchaWrapper.width() >= captchaWidth) {
+        if (captchaResized) {
+            captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform', '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin', '').css('-o-transform-origin', '');
+            captchaWrapper.height(captchaHeight);
+            captchaResized = false;
+        }
+    } else {
+        var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
+        captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform', 'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform', 'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0').css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
+        captchaWrapper.height(captchaHeight * scale);
+        if (captchaResized == false) captchaResized = true;
+    }
+}
+
+    //recap 
+    function recaptchaCallback(){
+        $('#btn-submit').removeAttr('disabled')             //ถ้าเป็น id ให้ใส่ # นำหน้าเสมอ
+    }
+    </script>
 </body>
 
 </html>

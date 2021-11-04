@@ -7,7 +7,7 @@ require_once('php/connect.php');
 //     $tag = 'all';
 // }
 
-$sql = "SELECT * FROM `articles` WHERE `status` = 'true' LIMIT 1";
+$sql = "SELECT * FROM `articles` WHERE `status` = 'true' ORDER BY RAND() LIMIT 1";
 $result = $conn->query($sql);
 
 ?>
