@@ -1,3 +1,8 @@
+<?php 
+require_once('php/connect.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,7 +94,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Donation</h5>
+                        <h5 class="card-title">Comment</h5>
                         <form>
                             <div class="row py-1">
                                 <div class="form-group col-md-4 py-1">
@@ -98,21 +103,22 @@
                                         aria-label="First name">
                                 </div>
                                 <div class="form-group col-md-4 py-1">
-                                    <label for="name">ชื่อ</label>
-                                    <input type="text" id="name" class="form-control" placeholder="First name"
-                                        aria-label="First name">
+                                    <label for="name">นามสกุล</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Last name"
+                                        aria-label="Last name">
                                 </div>
                                 <div class="form-group col-md-4 py-1">
-                                    <label for="name">ชื่อ</label>
-                                    <input type="text" id="name" class="form-control" placeholder="First name"
-                                        aria-label="First name">
+                                    <label for="name">ร้านอาหารที่ชื่นชอบ</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Restaurant name"
+                                        aria-label="Restaurant name">
                                 </div>
+                               
                             </div>
                             <div class="form-group">
                                 <label for="message">ข้อความ</label>
-                                <textarea id="message" rows="10" class="form-control" placeholder="หมายเหตุ"></textarea>
+                                <textarea id="message" rows="10" class="form-control" placeholder="Note"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary d-block mx-auto">เติมเงิน</button>
+                            <button type="submit" class="btn btn-primary d-block mx-auto">ส่ง</button>
                         </form>
                     </div>
                 </div>

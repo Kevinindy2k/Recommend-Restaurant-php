@@ -6,4 +6,5 @@ if ($conn->connect_errno){
     echo "Connect Error:".$conn->connect_error;
     exit();
 }
+$base_path_icon = 'assets/icon/';
 ?>

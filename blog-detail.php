@@ -1,7 +1,7 @@
 <?php
 require_once('php/connect.php');
 
-$sql = "SELECT * FROM articles WHERE id ='".$_GET['id']."' ";
+$sql = "SELECT * FROM articles WHERE id ='".$_GET['id']."' AND `status` = 'true'";
 $result = $conn->query($sql) or die($conn->error);
 
 if ($result->num_rows > 0){

@@ -1,3 +1,17 @@
+<?php
+require_once('php/connect.php');
+
+// if(isset($_GET['tag'])){
+//     $tag = $_GET['tag'];
+// }else{
+//     $tag = 'all';
+// }
+
+$sql = "SELECT * FROM `articles` WHERE `status` = 'true' LIMIT 1";
+$result = $conn->query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,95 +93,52 @@
   <section class="container">
     <h1 class="border-short-bottom text-center">รายการเเนะนำ</h1>
     <div class="row">
-      <section class="col-12 col-sm-12 mb-4">
-        <div class="card h-100">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <a href="#" class="">
-                <img
-                  src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80"
-                  class="img-fluid img-cover" alt="..." />
-              </a>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">ร้านที่ 1</h5>
-                <p class="card-text">
-                <span><b>ร้าน สีสด บาย บานาน่าลีฟ</b></span> ตั้งอยู่ภายในโครงการ The Circle ถนนราชพฤกษ์ เดินเข้ามาภายในร้านต้องสะดุดตากับ ไรซ์บาร์ (Rice Bar) บาร์ข้าวออร์แกนิคที่เกิดจากการนำข้าวหลากหลายสายพันธุ์มาพัฒนาทำเป็นสูตรที่ทานง่าย รสชาติอร่อย แถมเมนูอาหารของที่ร้านก็รสชาติดี เรียกได้ว่าอร่อยถูกปาก แถมดีต่อสุขภาพอีกด้วย
-                </p>
-                <div class="p-0 mb-2">
-                  <a href="#" class="btn btn-info">more info
-                    <i class="fas fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-                <div class="star-rating">
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <div class="star-current" style="width: 100%;">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <span class="text-muted">5 (100)</span>
-                <p class="card-text">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </p>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="col-12 col-sm-12 mb-4">
-        <div class="card h-100">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <a href="#" class="">
-                <img
-                  src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80"
-                  class="img-fluid img-cover" alt="honey" />
-              </a>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">ร้านที่ 2</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quod maiores molestiae hic soluta voluptates deserunt quo
-                  rerum? Ad quod deserunt non eius, blanditiis, at, sed a odit
-                  cupiditate repudiandae quisquam?
-                </p>
-                <div class="p-0 mb-2">
-                  <a href="#" class="btn btn-info">more info
-                    <i class="fas fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-                <div class="star-rating">
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <div class="star-current" style="width: 40%;">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <span class="text-muted">2 (50)</span>
-                <p class="card-text">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </p>
-              </div>
-            </div>
-          </div>
-      </section>
+      <?php 
+      while($row = $result->fetch_assoc()){ 
+      ?>
+    <section class="col-12 col-sm-12 mb-4">
+                <div class="card h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="blog-detail.php?id=<?php echo $row['id']?>" class="">
+                                <img src="<?php echo $row['image']?>"
+                                    class="img-fluid img-cover" alt="..." />
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $row['subject']?></h5>
+                                <p class="card-text">
+                                <?php echo $row['sub_title']?>
+                                </p>
+                                <div class="p-0 mb-2">
+                                    <a href="blog-detail.php?id=<?php echo $row['id']?>" class="btn btn-info">more info
+                                        <i class="fas fa-arrow-circle-right"></i>
+                                    </a>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <div class="star-current" style="width: 100%;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <span class="text-muted">5 (100)</span>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <?php }?>
     </div>
   </section>
   <!-- footer -->

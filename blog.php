@@ -6,10 +6,8 @@ require_once('php/connect.php');
 // }else{
 //     $tag = 'all';
 // }
-
 $tag = isset($_GET['tag']) ? $_GET['tag'] : 'all';
-$sql = "SELECT * FROM `articles` WHERE `tag` LIKE '%".$tag."%'";
-
+$sql = "SELECT * FROM `articles` WHERE `tag` LIKE '%".$tag."%' AND `status` = 'true'";
 $result = $conn->query($sql);
 if (!$result){
     header('Location: blog.php');
@@ -60,28 +58,32 @@ if (!$result){
             <div class="col-12 text-center">
                 <div class="btn-group-custom">
                     <a href ="blog.php?tag=all">
-                    <button class="btn btn-info">ทั้งหมด</button>
+                    <button class="btn btn-info <?php echo $tag == 'all' ? 'active' : '' ?>">ทั้งหมด</button>
                     </a>
                     <a href ="blog.php?tag=1star">
-                    <button class="btn btn-info">1 ดาว</button>
+                    <button class="btn btn-info <?php echo $tag == '1star' ? 'active' : '' ?>">1 ดาว</button>
                     </a>
                     <a href ="blog.php?tag=2star">
-                    <button class="btn btn-info">2 ดาว</button>
+                    <button class="btn btn-info <?php echo $tag == '2star' ? 'active' : '' ?>">2 ดาว</button>
                     </a>
                     <a href ="blog.php?tag=3star">
-                    <button class="btn btn-info">3 ดาว</button>
+                    <button class="btn btn-info <?php echo $tag == '3star' ? 'active' : '' ?>">3 ดาว</button>
                     </a>
                     <a href ="blog.php?tag=4star">
-                    <button class="btn btn-info">4 ดาว</button>
+                    <button class="btn btn-info <?php echo $tag == '4star' ? 'active' : '' ?>">4 ดาว</button>
                     </a>
                     <a href ="blog.php?tag=5star">
-                    <button class="btn btn-info">5 ดาว</button>
+                    <button class="btn btn-info <?php echo $tag == '5star' ? 'active' : '' ?>">5 ดาว</button>
                     </a>
                 </div>
             </div>
         </div>
         <div class="row">
-            <?php while($row = $result->fetch_assoc() ){ ?>
+            <?php 
+                if ($result->num_rows){
+                    while($row = $result->fetch_assoc() ){ 
+
+            ?>
             <section class="col-12 col-sm-12 mb-4">
                 <div class="card h-100">
                     <div class="row g-0">
@@ -89,6 +91,7 @@ if (!$result){
                             <a href="blog-detail.php?id=<?php echo $row['id']?>" class="">
                                 <img src="<?php echo $row['image']?>"
                                     class="img-fluid img-cover" alt="..." />
+                                    <!-- echo $base_path_icon.$row['image'] ใส่ตรง src ถ้าจะเปลี่ยนมาใช้แบบ path ไม่ใช้ลิ้ง -->
                             </a>
                         </div>
                         <div class="col-md-8">
@@ -124,7 +127,16 @@ if (!$result){
                         </div>
                     </div>
             </section>
-           <?php } ?>
+           <?php 
+           }
+        } else {
+        ?>
+
+<section class = "col-12">
+    <p class="text-center">ไม่มีข้อมูล</p>
+</section>
+<?php }?>
+
         </div>
     </section>
 
