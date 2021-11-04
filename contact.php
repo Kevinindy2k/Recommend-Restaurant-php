@@ -42,7 +42,7 @@ $secretKey = '6Le_PBMdAAAAAEJMhGEQQkVLsyLEcvXAaZUDuKBr';
             <div class="row">
                 <div class="col-12 text-center">
                     <h1 class="display-4 fw-bold">Contact</h1>
-                    <p class="lead">"ก็อร่อยอะไอสัส"</p>
+                    <p class="lead">"เว็ปแนะนำร้านอาหารที่คู่ควร"</p>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@ $secretKey = '6Le_PBMdAAAAAEJMhGEQQkVLsyLEcvXAaZUDuKBr';
         style="background-image: url('https://images.unsplash.com/photo-1428515613728-6b4607e44363?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');">
         <div class="page-image">
             <h1 class="display-4 fw-bold">Contact</h1>
-            <p class="lead">"ก็อร่อยอะไอสัส"</p>
+            <p class="lead">"เว็ปแนะนำร้านอาหารที่คู่ควร"</p>
         </div>
     </header>
 
@@ -67,9 +67,9 @@ $secretKey = '6Le_PBMdAAAAAEJMhGEQQkVLsyLEcvXAaZUDuKBr';
             <div class="col-4 sm-4 mb-3">
                 <div class="card h-100">
                     <div class="card-body">
-                        <i class="fas fa-address-card fa-4x py-2 text-info"></i>
-                        <h4 class="card-title">ที่อยู่</h4>
-                        <p class="card-text">ก็บอกให้ดู</p>
+                        <i class="fas fa-phone-square-alt fa-4x py-2 text-info"></i>
+                        <h4 class="card-title">ติดต่อ</h4>
+                        <p class="card-text">+66 99 999 9999 </p>
                     </div>
                 </div>
             </div>
@@ -78,16 +78,16 @@ $secretKey = '6Le_PBMdAAAAAEJMhGEQQkVLsyLEcvXAaZUDuKBr';
                     <div class="card-body">
                         <i class="fas fa-address-card fa-4x py-2 text-info"></i>
                         <h4 class="card-title">ที่อยู่</h4>
-                        <p class="card-text">ก็บอกให้ดู</p>
+                        <p class="card-text">กรุงเทพมหานคร</p>
                     </div>
                 </div>
             </div>
             <div class="col-4 sm-4 mb-3">
                 <div class="card h-100">
                     <div class="card-body">
-                        <i class="fas fa-address-card fa-4x py-2 text-info"></i>
-                        <h4 class="card-title">ที่อยู่</h4>
-                        <p class="card-text">ก็บอกให้ดู</p>
+                        <i class="fas fa-users fa-4x py-2 text-info"></i>
+                        <h4 class="card-title">จำนวนผู้ใช้ของวันนี้</h4>
+                        <p class="card-text">จำนวน 151 คน</p>
                     </div>
                 </div>
             </div>
