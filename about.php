@@ -76,8 +76,8 @@
                             <p class="text-infotest">Start</p>
                         </div>
                         <div class="timeline-card">
-                            <h5>Date : 16/10/2021</h5>
-                            <p class="text-muted">Today</p>
+                            <h5>Date : 6 October 2021</h5>
+                            <p class="text-muted">Planning</p>
                         </div>
                     </li>
                     <li class="inverted">
@@ -85,8 +85,8 @@
                             <p class="text-infotest">Work</p>
                         </div>
                         <div class="timeline-card">
-                            <h5>Date : 16/10/2021</h5>
-                            <p class="text-muted">Today</p>
+                            <h5>Date : 7-31 October 2021</h5>
+                            <p class="text-muted">Website Developing</p>
                         </div>
                     </li>
                     <li>
@@ -94,17 +94,26 @@
                             <p class="text-infotest">Check</p>
                         </div>
                         <div class="timeline-card">
-                            <h5>Date : 16/10/2021</h5>
-                            <p class="text-muted">Today</p>
+                            <h5>Date : 1 November 2021</h5>
+                            <p class="text-muted">Recheck the website and editing</p>
                         </div>
                     </li>
                     <li class="inverted">
                         <div class="timeline-badge">
-                            <p class="text-infotest">End</p>
+                            <p class="text-infotest">Publish</p>
                         </div>
                         <div class="timeline-card">
-                            <h5>Date : 16/10/2021</h5>
-                            <p class="text-muted">Today</p>
+                            <h5>Date : 2 November 2021</h5>
+                            <p class="text-muted">Website publishing</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge">
+                            <p class="text-infotest">Promote</p>
+                        </div>
+                        <div class="timeline-card">
+                            <h5>Date : 2-15 November 2021</h5>
+                            <p class="text-muted">Website promoting</p>
                         </div>
                     </li>
                     <li class="timeline-arrow">
