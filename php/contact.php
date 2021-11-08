@@ -1,3 +1,4 @@
+<body>
 <?php 
 require_once('connect.php');
 if (isset($_POST['btn-submit'])) {
@@ -8,7 +9,7 @@ if (isset($_POST['btn-submit'])) {
    $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$remoteip";
    $resp = json_decode(file_get_contents($url));
    if ($resp->success) {
-      echo '<pre>',print_r($_POST),'</pre>';
+    //   echo '<pre>',print_r($_POST),'</pre>';
       $sql = "INSERT INTO `contact` (`name`, `lastname`, `restaurant`, `message`, `created_at`) 
       VALUES ('".$_POST['name']."', 
             '".$_POST['lastname']."', 
@@ -65,10 +66,11 @@ function notify_message($message) {
             "ส่งข้อมูลเรียบร้อยแล้ว!",
             "success"
           )</script>'; 
-        header('Refresh:5; url=../index.php');
+        header('Refresh:2; url=../index.php');
     } else {
        echo '<script> alert("ส่งข้อมูลไม่สำเร็จ โปรดติดต่อ.....")</script>'; 
        header('Refresh:0; url=../index.php');
     }
 }
 ?>
+<body>
