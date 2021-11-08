@@ -9,14 +9,14 @@ if (isset($_POST['btn-submit'])) {
    $resp = json_decode(file_get_contents($url));
    if ($resp->success) {
       echo '<pre>',print_r($_POST),'</pre>';
-      $sql = "INSERT INTO `contact` (`name`, `lastname`, `restaurant`, `detail`, `created_at`) 
+      $sql = "INSERT INTO `contact` (`name`, `lastname`, `restaurant`, `message`, `created_at`) 
       VALUES ('".$_POST['name']."', 
             '".$_POST['lastname']."', 
             '".$_POST['restaurant']."', 
-            '".$_POST['detail']."', 
+            '".$_POST['message']."', 
             '".date("Y-m-d")."');";
 
-    $result = $conn->query($sql) or die($conn->error);
+    $result = $conn->query($sql);
     if($result){
         sendToLine();
 
@@ -34,7 +34,7 @@ function sendToLine (){
     $text .= "ชื่อ: ".  $_POST['name'] ."\n";
     $text .= "นามสกุล: ".  $_POST['lastname']."\n"; 
     $text .= "ร้านอาหาร: ".  $_POST['restaurant']."\n";
-    $text .= "ข้อความ: ".  $_POST['detail']; 
+    $text .= "ข้อความ: ".  $_POST['message']; 
     $message = array(
         'message' => $text
     );
@@ -59,8 +59,13 @@ function notify_message($message) {
     $result = file_get_contents(LINE_API,FALSE,$context);
     $resp = json_decode($result);
     if ($resp->status == 200) {
-        echo '<script> alert("ส่งข้อมูลเรียบร้อยแล้ว")</script>'; 
-        header('Refresh:0; url=../index.php');
+        echo '<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script> Swal.fire(
+            "Success!",
+            "ส่งข้อมูลเรียบร้อยแล้ว!",
+            "success"
+          )</script>'; 
+        header('Refresh:5; url=../index.php');
     } else {
        echo '<script> alert("ส่งข้อมูลไม่สำเร็จ โปรดติดต่อ.....")</script>'; 
        header('Refresh:0; url=../index.php');
